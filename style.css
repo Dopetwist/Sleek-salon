@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Space+Mono:ital,wght@1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+:root {
+    --background-color: #1f242d;
+    --main-color: #c71585;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --light-color: #ffe4e1;
+}
+
+body {
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 6% 2rem;
+}
+
+.header {
+    width: 100%;
+    background: var(--background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.7rem;
+    font-weight: 600;
+    letter-spacing: 0.25rem;
+    color: var(--light-color);
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 1.5rem;
+    transition: .4s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.logo-img img {
+    position: relative;
+    top: 20%;
+    left: 20%;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.home {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/home_bg.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home h2 {
+    font-size: 13rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.home h2 span {
+    font-size: 5rem;
+    font-style: italic;
+    color: var(--main-color);
+    box-shadow: 0 0 1rem var(--text-color);
+    padding: .7rem;
+    border-radius: .8rem;
+    margin-left: 2rem;
+}
+
+.home .home-content p {
+    font-size: 1.9rem;
+    max-width: 70rem;
+    margin: 2rem;
+    line-height: 1.5;
+}
+
+.social-icons a {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    margin: 1rem 0 3rem 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6rem;
+    color: var(--text-color);
+    transition: .5s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.imgs {
+    height: 60rem;
+    width: 60rem;
+    background-color: transparent;
+    position: absolute;
+    top: 10%;
+    right: 0;
+}
+
+.imgs img {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 2rem;
+}
+
+.img1 img {
+    position: absolute;
+    top: 5%;
+    right: 9%;
+    border: .5rem solid var(--main-color);
+}
+
+.img2 img {
+    position: absolute;
+    bottom: 5%;
+    left: 9%;
+    border: .5rem solid var(--main-color);
+}
+
+.about {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-img img {
+    width: 30vw;
+    border-radius: 2rem;
+}
+
+.btn {
+    font-weight: 600;
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: .8rem 1rem;
+    letter-spacing: .1rem;
+    font-size: 1.3rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    border-radius: 2rem;
+    transition: .3s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.heading {
+    font-size: 3rem;
+    text-align: center;
+    margin: .5rem 0 2rem;
+}
+
+.heading span, .gallery span {
+    color: var(--main-color);
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+}
+
+.services {
+    background: var(--second-bg-color);
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 3rem 0 6rem;
+}
+
+.services-container .barbing {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/barbing.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .4s ease;
+}
+
+.services-container .barbing:hover {
+    transform: scale(1.07);
+    border: .3rem solid var(--main-color);
+    cursor: pointer;
+}
+
+.services-container .braiding {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/women1.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .4s ease;
+}
+
+.services-container .braiding:hover {
+    transform: scale(1.07);
+    border: .3rem solid var(--main-color);
+    cursor: pointer;
+}
+
+.services-container .pedicure {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/pedicure.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .4s ease;
+}
+
+.services-container .pedicure:hover {
+    transform: scale(1.07);
+    border: .3rem solid var(--main-color);
+    cursor: pointer;
+}
+
+.services-container .tinting {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/tint.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .4s ease;
+}
+
+.services-container .tinting:hover {
+    transform: scale(1.07);
+    border: .3rem solid var(--main-color);
+    cursor: pointer;
+}
+
+.services-container .dreadlocks {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/dread.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .4s ease;
+}
+
+.services-container .dreadlocks:hover {
+    transform: scale(1.07);
+    border: .3rem solid var(--main-color);
+    cursor: pointer;
+}
+
+.services-container .treatments {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/women12.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .4s ease;
+}
+
+.services-container .treatments:hover {
+    transform: scale(1.07);
+    border: .3rem solid var(--main-color);
+    cursor: pointer;
+}
+
+.services-container .services-box {
+    flex: 1 1 30rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--background-color);
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+}
+
+.services-container .services-box h3 {
+    font-size: 2rem;
+    margin: 1rem 0 2rem;
+}
+
+.services-container .services-box p {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+.gallery {
+    background: var(--background-color);
+}
+
+.gallery h2 {
+    margin-bottom: 2rem;
+}
+
+.gallery h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.gallery-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.gallery-content .gallery-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--background-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.gallery-box img {
+    width: 100%;
+}
+
+.adjust-container {
+    margin-top: 12rem;
+}
+
+.ped-margin, .grid-container {
+    margin-bottom: 7rem;
+}
+
+.products {
+    background: var(--second-bg-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template: repeat(6, 1fr) / 50% 50%;
+    width: 100%;
+    row-gap: 2rem;
+    margin-top: 5rem;
+}
+
+.grid-container .grid-box {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.grid-box img {
+    width: 100%;
+    height: 20rem;
+}
+
+.grid-box .description {
+    margin-left: 1.5rem;
+    line-height: 1.6;
+}
+
+button {
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: var(--main-color);
+    letter-spacing: .2rem;
+    color: var(--text-color);
+    padding: .7rem 2rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    transition: .3s ease;
+}
+
+button:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.description h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.description p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.sub {
+    margin-top: 1rem;
+}
+
+.price {
+    margin: .7rem 0;
+    border: .2rem solid var(--main-color);
+    height: 3rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
+.contact {
+    background: var(--background-color);
+}
+
+.contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box form {
+    max-width: 70rem;
+    text-align: center;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form input, textarea {
+    width: 100%;
+    font-size: 1.6rem;
+    background-color: var(--second-bg-color);
+    margin: .7rem 0;
+    box-shadow: 0 0 1rem var(--background-color);
+    border-radius: .8rem;
+    padding: 1rem;
+    color: var(--text-color);
+}
+
+form input {
+    width: 49%;
+}
+
+form textarea {
+    resize: none;
+}
+
+.footer {
+    background: var(--second-bg-color);
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6%;
+}
+
+.footer-container p {
+    font-size: 1.6rem;
+}
+
+.footer-container a {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .7rem;
+    transition: .3s ease;
+}
+
+.footer-container a:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.footer-container a i {
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
