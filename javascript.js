@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 1000,
         easing: 'ease-in-out',
         origin: 'right'
-    }),
-
-    ScrollReveal().reveal('.recipe2', {
-        distance: '180px',
-        duration: 1000,
-        easing: 'ease-in-out',
-        origin: 'left'
     })
+
+    // ScrollReveal().reveal('.recipe2', {
+    //     distance: '180px',
+    //     duration: 1000,
+    //     easing: 'ease-in-out',
+    //     origin: 'left'
+    // })
 });
