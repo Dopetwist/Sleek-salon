@@ -1,4 +1,39 @@
 import React from "react";
+import Men from "./Men.jsx";
+import Women from "./Women.jsx";
+import Pedicure from "./Pedicure.jsx";
+import { menPhotos, womenPhotos, pedicurePhotos } from "./index.js";
+
+function displayMen (single) {
+    return (
+        <Men 
+        id={single.id}
+        key={single.id}
+        image={single.img}
+        />
+    )
+}
+
+function displayWomen (single) {
+    return (
+        <Women 
+        id={single.id}
+        key={single.id}
+        image={single.img}
+        />
+    )
+}
+
+function displayPedicure (single) {
+    return (
+        <Pedicure 
+        id={single.id}
+        key={single.id}
+        image={single.img}
+        />
+    )
+}
+
 
 function Gallery() {
     return (
@@ -8,36 +43,24 @@ function Gallery() {
             <h2 className="heading">Gallery</h2>
             <h3>Men <span>Section</span></h3>
 
-            // Men Gallery layout
+             {/* Men Gallery layout */}
 
-            <div className="gallery-content">
-                <div className="gallery-box">
-                    <img src="images/men1.jpeg" alt="" />
-                </div>
-            </div>
+            {menPhotos.map(displayMen)}
 
-            // Women Gallery layout
+            {/* Women Gallery layout */}
 
             <div className="adjust-container">
                 <h3>Women <span>Section</span></h3>
 
-                <div className="gallery-content">
-                    <div className="gallery-box">
-                        <img src="images/women1.jpeg" alt="" />
-                    </div>
-                </div>
+                {womenPhotos.map(displayWomen)}
             </div>
 
-            // Pedicure Gallery layout
+            {/* Pedicure Gallery layout */}
 
             <div className="adjust-container">
                 <h3>Pedicure & <span>Manicure</span></h3>
 
-                <div className="gallery-content ped-margin">
-                    <div className="gallery-box">
-                        <img src="images/pedicure1.jpeg" alt="" />
-                    </div>
-                </div>
+                {pedicurePhotos.map(displayPedicure)}
             </div>
         </section>
     )
