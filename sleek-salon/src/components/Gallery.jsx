@@ -2,7 +2,7 @@ import React from "react";
 import Men from "./Men.jsx";
 import Women from "./Women.jsx";
 import Pedicure from "./Pedicure.jsx";
-import { menPhotos, womenPhotos, pedicurePhotos } from "./index.js";
+import { menPhotos, womenPhotos, pedicurePhotos } from "../../index.js";
 
 function displayMen (single) {
     return (
