@@ -1,4 +1,4 @@
-const men = [
+const menPhotos = [
    {
     id: 1,
     img: "images/men1.jpeg"
@@ -67,7 +67,7 @@ const men = [
 
 
 
-const women = [
+const womenPhotos = [
     {
     id: 1,
     img: "images/women1.jpeg"
@@ -135,7 +135,7 @@ const women = [
 ]
 
 
-const pedicure = [
+const pedicurePhotos = [
     {
     id: 1,
     img: "images/pedicure1.jpeg"
@@ -171,7 +171,7 @@ const pedicure = [
 ]
 
 
-const products = [
+const productsPhotos = [
     {
         id: 1,
         title: "BEST SHAMPOO AND CONDITIONER FOR DRY HAIR",
@@ -258,4 +258,4 @@ const products = [
     }
 ]
 
-export { men, women, pedicure, products };
+export { menPhotos, womenPhotos, pedicurePhotos, productsPhotos };
