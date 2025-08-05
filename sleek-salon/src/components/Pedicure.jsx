@@ -1,10 +1,17 @@
 import React from "react";
+import { pedicurePhotos } from "../../index.js";
 
-function Pedicure(props) {
+function Pedicure() {
     return (
-        <div className="gallery-content ped-margin">
-            <div className="gallery-box">
-                <img src={props.image} alt="" />
+        <div className="adjust-container">
+            <h3>Pedicure & <span>Manicure</span></h3>
+            
+            <div className="gallery-content ped-margin">
+                {pedicurePhotos.map((item) => (
+                    <div className="gallery-box">
+                        <img key={item.id} src={item.img} alt="Pedicure Image" />
+                    </div>
+                ))}
             </div>
         </div>
     )
