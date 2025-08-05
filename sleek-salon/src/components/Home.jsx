@@ -7,7 +7,7 @@ function Home() {
         <section className="home" id="home">
             <div className="home-content">
                 <div className="logo-img">
-                    <img src="images/logo.jpeg" alt="" />
+                    <img src="/images/logo.jpeg" alt="Logo Image" />
                 </div>
 
                 <h2>Sleek <span>Unisex Salon</span></h2>

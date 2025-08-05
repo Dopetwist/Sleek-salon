@@ -1,11 +1,14 @@
 import React from "react";
+import { menPhotos } from "../../index.js";
 
-function Men(props) {
+function Men() {
     return (
         <div className="gallery-content">
-            <div className="gallery-box">
-                <img src={props.image} alt="" />
-            </div>
+            {menPhotos.map((item) => (
+                <div className="gallery-box">
+                    <img key={item.id} src={item.img} alt="Men Hair Photo" />
+                </div>
+            ))}
         </div>
     )
 }
