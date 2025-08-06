@@ -8,8 +8,8 @@ function Women() {
             
             <div className="gallery-content">
                 {womenPhotos.map((item) => (
-                    <div className="gallery-box">
-                        <img key={item.id} src={item.img} alt="Women Hair Photo" />
+                    <div className="gallery-box" key={item.id}>
+                        <img src={item.img} alt="Women Hair Photo" />
                     </div>
                 ))}
             </div>

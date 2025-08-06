@@ -8,8 +8,8 @@ function Pedicure() {
             
             <div className="gallery-content ped-margin">
                 {pedicurePhotos.map((item) => (
-                    <div className="gallery-box">
-                        <img key={item.id} src={item.img} alt="Pedicure Image" />
+                    <div className="gallery-box" key={item.id}>
+                        <img src={item.img} alt="Pedicure Image" />
                     </div>
                 ))}
             </div>
