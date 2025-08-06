@@ -5,8 +5,8 @@ function Men() {
     return (
         <div className="gallery-content">
             {menPhotos.map((item) => (
-                <div className="gallery-box">
-                    <img key={item.id} src={item.img} alt="Men Hair Photo" />
+                <div className="gallery-box" key={item.id}>
+                    <img src={item.img} alt="Men Hair Photo" />
                 </div>
             ))}
         </div>

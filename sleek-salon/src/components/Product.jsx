@@ -10,7 +10,7 @@ function Product() {
 
             <div className="grid-container">
                 {productsPhotos.map((item) => (
-                    <div className="grid-box">
+                    <div className="grid-box" key={item.id}>
                         <div className="prod-img">
                             <img src={item.img} alt="Product Image" />
                         </div>
