@@ -1,17 +1,19 @@
-import Header from './components/Header.jsx';
-import Home from './components/Home.jsx';
-import About from './components/About.jsx';
-import Service from './components/Service.jsx';
-import Gallery from './components/Gallery.jsx';
-import Contact from './components/Contact.jsx';
-import Footer from './components/Footer.jsx';
-import Product from './components/Product.jsx';
+import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
+import Service from './components/Service';
+import Gallery from './components/Gallery';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Product from './components/Product';
+import ScrollRevealWrapper from './components/ScrollRevealWrapper';
 
 
 function App() {
 
   return (
     <>
+      <ScrollRevealWrapper />
       <Header />
       <Home />
       <About />

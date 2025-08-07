@@ -1,5 +1,5 @@
 import React from "react";
-import { pedicurePhotos } from "../../index.js";
+import { pedicurePhotos } from "../../index";
 
 function Pedicure() {
     return (
