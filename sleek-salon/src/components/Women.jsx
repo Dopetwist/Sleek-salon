@@ -1,5 +1,5 @@
 import React from "react";
-import { womenPhotos } from "../../index.js";
+import { womenPhotos } from "../../index";
 
 function Women() {
     return (

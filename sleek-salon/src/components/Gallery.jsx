@@ -1,7 +1,7 @@
 import React from "react";
-import Men from "./Men.jsx";
-import Women from "./Women.jsx";
-import Pedicure from "./Pedicure.jsx";
+import Men from "./Men";
+import Women from "./Women";
+import Pedicure from "./Pedicure";
 
 
 
