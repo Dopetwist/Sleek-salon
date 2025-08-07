@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ScrollReveal from 'scrollreveal';
 
-const scrollAnimations = () => {
+const ScrollRevealWrapper = () => {
     useEffect(() => {
         ScrollReveal().reveal('.heading', {
             distance: '60px',
@@ -26,6 +26,6 @@ const scrollAnimations = () => {
             origin: 'right'
         })
     }, []);
-}
+};
 
-export default scrollAnimations;
+export default ScrollRevealWrapper;
