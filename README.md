@@ -1,1 +1,32 @@
-## Sleek Salon 👧
+# Sleek Salon 👧🧔
+
+A Unisex salon web app initially built with plain HTML, CSS and JavaScript but now refined using a more modular framework with a focus on clean user-friendly interfaces and maintainability.
+
+## 🛠️ Tech Stack:
+
+*  React + Vite
+*  CSS
+*  JavaScript
+*  HTML
+
+## 🎲 Running the Project
+
+To run the project locally, follow these steps;  
+
+1. Clone the repo
+
+     git clone `https://github.com/Dopetwist/Sleek-salon.git`  
+     cd `sleek-salon`  
+
+2. Install all dependencies `npm install`
+
+3. On the terminal, run the command `npm run dev`
+
+4. Open `http://localhost:5173` in your browser
+
+## 🤝 Contributions
+
+Do you have ideas on features and functionalities for further improvements?  
+Create a pull request.  
+
+All collaborations are welcome ✅
