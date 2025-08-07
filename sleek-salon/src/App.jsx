@@ -6,12 +6,14 @@ import Gallery from './components/Gallery.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import Product from './components/Product.jsx';
+import ScrollRevealWrapper from './components/ScrollRevealWrapper';
 
 
 function App() {
 
   return (
     <>
+      <ScrollRevealWrapper />
       <Header />
       <Home />
       <About />
