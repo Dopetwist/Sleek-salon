@@ -18,11 +18,15 @@ To run the project locally, follow these steps;
      git clone `https://github.com/Dopetwist/Sleek-salon.git`  
      cd `sleek-salon`  
 
-2. Install all dependencies `npm install`
+2. Install all dependencies
 
-3. On the terminal, run the command `npm run dev`
+   `npm install`
 
-4. Open `http://localhost:5173` in your browser
+4. On the terminal, run the command
+
+   `npm run dev`
+
+6. Open `http://localhost:5173` in your browser
 
 ## 🤝 Contributions
 
