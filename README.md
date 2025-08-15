@@ -28,6 +28,12 @@ To run the project locally, follow these steps;
 
 6. Open `http://localhost:5173` in your browser
 
+## 💠 Future Improvements
+
+* Order for service functionality.
+* Add to Cart (products) feature.
+* Contact form mailing activation.
+
 ## 🤝 Contributions
 
 Do you have ideas on features and functionalities for further improvements?  
