@@ -3,6 +3,8 @@ import { womenPhotos } from "../../index";
 
 function Women() {
     return (
+        // Display all women photos
+        
         <div className="adjust-container">
             <h3>Women <span>Section</span></h3>
             
