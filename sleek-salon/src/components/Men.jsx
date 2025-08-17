@@ -3,6 +3,8 @@ import { menPhotos } from "../../index.js";
 
 function Men() {
     return (
+        // Display all men photos
+        
         <div className="gallery-content">
             {menPhotos.map((item) => (
                 <div className="gallery-box" key={item.id}>

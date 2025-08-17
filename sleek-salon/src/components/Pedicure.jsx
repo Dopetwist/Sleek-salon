@@ -3,6 +3,8 @@ import { pedicurePhotos } from "../../index";
 
 function Pedicure() {
     return (
+        // Pedicure Section
+        
         <div className="adjust-container">
             <h3>Pedicure & <span>Manicure</span></h3>
             
