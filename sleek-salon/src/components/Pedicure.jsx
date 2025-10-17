@@ -1,4 +1,4 @@
-import React from "react";
+
 import { pedicurePhotos } from "../../index";
 
 function Pedicure() {

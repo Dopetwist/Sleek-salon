@@ -1,4 +1,4 @@
-import React from "react";
+
 import Men from "./Men";
 import Women from "./Women";
 import Pedicure from "./Pedicure";
