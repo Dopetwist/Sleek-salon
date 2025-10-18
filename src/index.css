@@ -541,7 +541,9 @@ form textarea {
 /* Portrait Tablet */
 
 @media (min-width: 480px) and (max-width: 767px) {
-
+    .navbar {
+        display: none;
+    }
 }
 
 /* Landscape Tablet */
