@@ -9,7 +9,7 @@ function Header() {
         <header className="header">
             <a href="#" className="logo">Sleek</a>
             
-            <Icons.X />
+            <Icons.TextAlignJustify id="menu-icon" />
 
             <Nav />
         </header>
