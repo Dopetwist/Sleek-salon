@@ -39,7 +39,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 2rem 6%;
+  padding: 2rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,11 +58,15 @@ section {
   cursor: pointer;
 }
 
+#menu-icon {
+    display: none;
+}
+
 .navbar a {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--text-color);
-  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   transition: .4s ease;
 }
 
@@ -70,10 +74,13 @@ section {
   color: var(--main-color);
 }
 
+.logo-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo-img img {
-  position: relative;
-  top: 20%;
-  left: 20%;
   height: 17rem;
   width: 17rem;
   border-radius: 50%;
@@ -120,7 +127,9 @@ section {
 }
 
 .social-icons {
-    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
 }
 
 .social-icons a {
@@ -129,10 +138,10 @@ section {
     border-radius: 50%;
     background: transparent;
     border: .2rem solid var(--main-color);
-    margin: 1rem 0 3rem 2rem;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 1rem;
     font-size: 1.9rem;
     color: var(--text-color);
     transition: .5s ease;
@@ -176,8 +185,14 @@ section {
 .about {
     background-color: var(--background-color);
     display: flex;
+    flex-direction: column;
+}
+
+.about-sub {
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 6rem;
     gap: 3rem;
 }
 
@@ -526,4 +541,86 @@ form textarea {
 .footer-container a i {
     font-size: 3rem;
     color: var(--text-color);
+}
+
+
+
+/* BREAKPOINTS */
+
+/* Mobile */
+
+@media (max-width: 479px) {
+
+}
+
+/* Portrait Tablet */
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    section#about {
+        padding-bottom: 10rem;
+    }
+
+    .logo-img img {
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .home h2 {
+        font-size: 6rem;
+    }
+
+    .home h2 span {
+        font-size: 3rem;
+    }
+
+    .home .home-content p {
+        font-size: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .heading {
+        font-size: 2.7rem;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+    }
+
+    .about-sub {
+        flex-direction: column;
+    }
+
+    .about-content p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Landscape Tablet */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Laptop */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+}
+
+/* Desktops */
+
+@media (min-width: 1200px) {
+
 }
