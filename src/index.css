@@ -39,7 +39,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 2rem 6%;
+  padding: 2rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,10 +59,10 @@ section {
 }
 
 .navbar a {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--text-color);
-  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   transition: .4s ease;
 }
 
@@ -526,4 +526,38 @@ form textarea {
 .footer-container a i {
     font-size: 3rem;
     color: var(--text-color);
+}
+
+
+
+/* BREAKPOINTS */
+
+/* Mobile */
+
+@media (max-width: 479px) {
+
+}
+
+/* Portrait Tablet */
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* Landscape Tablet */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Laptop */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+
+}
+
+/* Desktops */
+
+@media (min-width: 1200px) {
+
 }
