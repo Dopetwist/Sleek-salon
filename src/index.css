@@ -26,6 +26,7 @@ html {
 
 body {
   color: var(--text-color);
+  overflow: hidden;
 }
 
 section {
@@ -397,7 +398,7 @@ section {
     display: grid;
     grid-template: repeat(6, 1fr) / 50% 50%;
     width: 100%;
-    row-gap: 2rem;
+    gap: 3rem;
     margin-top: 5rem;
 }
 
@@ -604,6 +605,33 @@ form textarea {
 
     .about-content p {
         font-size: 1.5rem;
+    }
+
+    .grid-container {
+        gap: 2rem;
+    }
+
+    .grid-container .grid-box {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .grid-box .description {
+        margin-left: 0;
+    }
+
+    .prod-img {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .description h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    section#products {
+        padding: 10rem 4% 2rem;
     }
 }
 
