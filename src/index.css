@@ -26,6 +26,7 @@ html {
 
 body {
   color: var(--text-color);
+  overflow: hidden;
 }
 
 section {
@@ -606,6 +607,10 @@ form textarea {
         font-size: 1.5rem;
     }
 
+    .grid-container {
+        gap: 2rem;
+    }
+
     .grid-container .grid-box {
         flex-direction: column;
         align-items: start;
@@ -616,7 +621,17 @@ form textarea {
     }
 
     .prod-img {
+        width: 80%;
         margin-bottom: 2rem;
+    }
+
+    .description h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    section#products {
+        padding: 10rem 4% 2rem;
     }
 }
 
