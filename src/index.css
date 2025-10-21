@@ -605,6 +605,11 @@ form textarea {
         font-size: 1.5rem;
     }
 
+    .gallery-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
     .grid-container {
         gap: 1rem;
     }
@@ -704,6 +709,10 @@ form textarea {
 
     .about-content p {
         font-size: 1.5rem;
+    }
+
+    .gallery-content {
+        gap: 2rem;
     }
 
     .grid-container {
