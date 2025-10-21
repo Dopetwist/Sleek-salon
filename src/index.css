@@ -606,7 +606,7 @@ form textarea {
     }
 
     .grid-container {
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .grid-container .grid-box {
@@ -643,8 +643,13 @@ form textarea {
         width: 100%;
     }
 
+    .footer-container {
+        flex-direction: column-reverse;
+    }
+
     .footer-container p {
         font-size: 1.4rem;
+        margin-top: 2rem;
     }
 }
 
