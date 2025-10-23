@@ -665,12 +665,28 @@ form textarea {
         font-size: 2.5rem;
     }
 
+    .header {
+        position: relative;
+    }
+
     .navbar {
         display: none;
     }
 
     .navbar.show {
+        width: 100%;
+        background-color: red;
         display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 2rem 5%;
+    }
+
+    .navbar.show a {
+        display: block;
+        width: max-content;
+        margin: 2rem 0;
     }
 
     #menu-icon {
