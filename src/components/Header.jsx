@@ -25,7 +25,7 @@ function Header() {
                     : <Icons.TextAlignJustify id="menu-icon" /> }
             </div>
 
-            <Nav />
+            <Nav checkOpen={open} />
         </header>
     )
 }
