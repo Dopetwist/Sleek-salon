@@ -1,5 +1,5 @@
 
-function Nav() {
+function Nav(props) {
     return (
         // Nav Section
 

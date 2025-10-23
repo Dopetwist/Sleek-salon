@@ -669,6 +669,10 @@ form textarea {
         display: none;
     }
 
+    .navbar.show {
+        display: block;
+    }
+
     #menu-icon {
         display: block;
     }
