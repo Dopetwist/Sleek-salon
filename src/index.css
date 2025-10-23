@@ -571,6 +571,10 @@ form textarea {
         font-size: 2.5rem;
     }
 
+    .header {
+        position: relative;
+    }
+
     .navbar {
         display: none;
     }
