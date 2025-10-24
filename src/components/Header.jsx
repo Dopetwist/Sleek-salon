@@ -10,10 +10,21 @@ function Header() {
     useEffect(() => {
         const navBar = document.querySelector(".navbar");
 
+        const addFalse = () => {
+            setOpen(false)
+        }
+
         if (open) {
             navBar.classList.add("show");
         } else {
             navBar.classList.remove("show");
+        }
+
+        window.addEventListener("scroll", addFalse);
+
+        // Cleanup function
+        return () => {
+            window.removeEventListener("scroll", addFalse);
         }
     }, [open]);
     
