@@ -32,8 +32,8 @@ function Header() {
     return (
         //  Header Section
 
-        <header className="header">
-            <a href="#" className="logo">Sleek</a>
+        <header className="header" id="header">
+            <a href="#home" className="logo">Sleek</a>
             
             <div id="menu-con"
             onClick={() => {setOpen(!open)}}
