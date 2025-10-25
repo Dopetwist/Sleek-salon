@@ -14,6 +14,7 @@ function Header() {
             setOpen(false)
         }
 
+        // Toggle mobile navbar 
         if (open) {
             navBar.classList.add("show");
         } else {
@@ -35,8 +36,9 @@ function Header() {
         <header className="header" id="header">
             <a href="#home" className="logo">Sleek</a>
             
+            {/* Toggle Menu Icon */}
             <div id="menu-con"
-            onClick={() => {setOpen(!open)}}
+            onClick={() => {setOpen(!open)}} 
             >
                 { open ? <Icons.X id="menu-icon" />
                     : <Icons.TextAlignJustify id="menu-icon" /> }
