@@ -1,8 +1,8 @@
 # Sleek Salon 👧🧔
 
-A Unisex salon web app initially built with plain HTML, CSS and JavaScript but now refined using a more modular framework with a focus on clean user-friendly interfaces and maintainability.  
+A Unisex salon web app initially built with plain HTML, CSS and JavaScript but later refined using a more modular framework with a focus on a clean interface and functionality.  
 
-It showcases good hair styles, services and products of both male and female.
+It showcases good hair styles, services and products for both male and female.
 
 ## 🛠️ Tech Stack:
 
