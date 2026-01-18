@@ -250,15 +250,6 @@ section {
     margin-bottom: 3rem;
 }
 
-.box-image {
-    width: 100%;
-}
-
-/* .box-texts {
-    position: absolute;
-    background-color: red;
-} */
-
 .services {
     background: var(--second-bg-color);
 }
@@ -273,7 +264,7 @@ section {
 }
 
 .services-container .barbing {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/barbing.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/barbing.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -287,7 +278,7 @@ section {
 }
 
 .services-container .braiding {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/women1.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/women1.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -301,7 +292,7 @@ section {
 }
 
 .services-container .pedicure {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/pedicure.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/pedicure.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -315,7 +306,7 @@ section {
 }
 
 .services-container .tinting {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/tint.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/tint.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -329,7 +320,7 @@ section {
 }
 
 .services-container .dreadlocks {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/dread.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/dread.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -343,7 +334,7 @@ section {
 }
 
 .services-container .treatments {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/women12.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/women12.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -360,9 +351,8 @@ section {
     flex: 1 1 30rem;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--background-color);
-    /* padding: 4rem 2rem 3rem; */
+    padding: 4rem 2rem 3rem;
     text-align: center;
-    position: relative;
     overflow: hidden;
 }
 
