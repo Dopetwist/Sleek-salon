@@ -250,6 +250,15 @@ section {
     margin-bottom: 3rem;
 }
 
+.box-image {
+    width: 100%;
+}
+
+/* .box-texts {
+    position: absolute;
+    background-color: red;
+} */
+
 .services {
     background: var(--second-bg-color);
 }
@@ -351,8 +360,10 @@ section {
     flex: 1 1 30rem;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--background-color);
-    padding: 4rem 2rem 3rem;
+    /* padding: 4rem 2rem 3rem; */
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .services-container .services-box h3 {
