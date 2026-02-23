@@ -35,16 +35,24 @@ function Header() {
 
         <header className="header" id="header">
             <a href="#home" className="logo">Sleek</a>
-            
-            {/* Toggle Menu Icon */}
-            <div id="menu-con"
-            onClick={() => {setOpen(!open)}} 
-            >
-                { open ? <Icons.X id="menu-icon" />
-                    : <Icons.TextAlignJustify id="menu-icon" /> }
-            </div>
 
             <Nav />
+            
+            <div className="menu-cart">
+                <div className="cart">
+                    <Icons.ShoppingCart />
+                </div>
+
+                {/* Toggle Menu Icon */}
+                <div id="menu-con"
+                onClick={() => {setOpen(!open)}} 
+                >
+                    { open ? <Icons.X id="menu-icon" />
+                        : <Icons.TextAlignJustify id="menu-icon" /> }
+                </div>
+            </div>
+
+            
         </header>
     )
 }

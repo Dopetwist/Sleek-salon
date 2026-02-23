@@ -63,6 +63,20 @@ section {
     display: none;
 }
 
+.menu-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart {
+    margin-right: 1rem;
+}
+
+.cart:hover {
+    cursor: pointer;
+}
+
 .navbar a {
   font-size: 1.5rem;
   font-weight: 500;
