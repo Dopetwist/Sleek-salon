@@ -19,7 +19,7 @@ function Product() {
                             <p>{item.description}</p>
                             <div className="sub">
                                 <p className="price">{item.price}</p>
-                                <button>Order</button>
+                                <button> Add to Cart </button>
                             </div>
                         </div>
                     </div>

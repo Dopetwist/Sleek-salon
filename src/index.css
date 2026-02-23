@@ -71,10 +71,16 @@ section {
 
 .cart {
     margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cart:hover {
     cursor: pointer;
+    background-color: #424242;
 }
 
 .navbar a {
@@ -450,12 +456,12 @@ section {
 }
 
 button {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
     background: var(--main-color);
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
     color: var(--text-color);
-    padding: .7rem 2rem;
+    padding: .7rem 1.5rem;
     margin-top: 1rem;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--main-color);
