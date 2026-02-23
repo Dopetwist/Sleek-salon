@@ -1,4 +1,3 @@
-
 function Home() {
     return (
         // Home section design

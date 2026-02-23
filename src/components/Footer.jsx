@@ -1,4 +1,3 @@
-
 import { currentYear } from "../func";
 
 function Footer() {

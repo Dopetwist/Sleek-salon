@@ -1,4 +1,3 @@
-
 import { womenPhotos } from "../../index";
 
 function Women() {

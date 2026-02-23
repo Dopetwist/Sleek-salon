@@ -1,4 +1,3 @@
-
 import { pedicurePhotos } from "../../index";
 
 function Pedicure() {

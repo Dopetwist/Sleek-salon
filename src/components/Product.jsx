@@ -1,4 +1,3 @@
-
 import { productsPhotos } from "../../index";
 
 function Product() {

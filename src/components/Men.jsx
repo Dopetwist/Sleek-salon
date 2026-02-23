@@ -1,4 +1,3 @@
-
 import { menPhotos } from "../../index.js";
 
 function Men() {

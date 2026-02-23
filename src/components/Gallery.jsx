@@ -1,4 +1,3 @@
-
 import Men from "./Men";
 import Women from "./Women";
 import Pedicure from "./Pedicure";
