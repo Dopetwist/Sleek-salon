@@ -40,6 +40,10 @@ function Header() {
             <div className="menu-cart">
                 <div className="cart">
                     <Icons.ShoppingCart />
+
+                    <div className="cart-count">
+                        <p className="item-count"> 1 </p>
+                    </div>
                 </div>
 
                 {/* Toggle Menu Icon */}

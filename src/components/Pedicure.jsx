@@ -1,4 +1,4 @@
-import { pedicurePhotos } from "../../index";
+import { pedicurePhotos } from "../components/GalleryPhotos";
 
 function Pedicure() {
     return (
