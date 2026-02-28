@@ -21,11 +21,12 @@ function App() {
 
       if (existingItem) {
         // Increase quantity
-        return prevCart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
+        // return prevCart.map((item) =>
+        //   item.id === product.id
+        //     ? { ...item, quantity: item.quantity + 1 }
+        //     : item
+        // );
+        alert("Product already exist in Cart!");
       } else {
         // Add new product
         return [...prevCart, { ...product, quantity: 1 }];
