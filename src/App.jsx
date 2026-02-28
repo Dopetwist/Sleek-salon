@@ -5,7 +5,7 @@ import Service from './components/Service';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Product from './components/Product';
+import Product from './components/ProductCard';
 import ScrollRevealWrapper from './components/ScrollRevealWrapper';
 
 

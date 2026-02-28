@@ -1,18 +1,6 @@
-import { useState } from "react";
-import productsPhotos from "../components/ProductList";
+import productsPhotos from "./ProductList";
 
 function Product() {
-    const [ productID, setProductId ] = useState([]);
-    const [ count, setCount ] = useState(0);
-
-    let idArray = [];
-
-    // function getProductId(item) {
-    //     setCount(count + 1);
-    //     idArray.push(item.id);
-
-    //     console.log(idArray[0]);
-    // }
 
     return (
         // Product section design
@@ -33,12 +21,7 @@ function Product() {
                             <div className="sub">
                                 <p className="price">{item.price}</p>
                                 <button
-                                onClick={() => {setCount(count + 1);
-                                    idArray.push(item.id);
-
-                                    console.log(count);
-                                    console.log(idArray[0]);
-                                }}
+                                onClick={() => {}}
                                 > Add to Cart 
                                 </button>
                             </div>
