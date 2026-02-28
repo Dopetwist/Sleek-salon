@@ -3,7 +3,7 @@ import Nav from "../components/Nav";
 import Icons from "./Icons";
 import Cart from "./Cart";
 
-function Header() {
+function Header({ cart }) {
 
     const [ open, setOpen ] = useState(false);
 
@@ -39,7 +39,7 @@ function Header() {
             <Nav />
             
             <div className="menu-cart">
-                <Cart />
+                <Cart passCart={cart} />
 
                 {/* Toggle Menu Icon */}
                 <div id="menu-con"
