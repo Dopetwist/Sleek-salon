@@ -6,7 +6,7 @@ import Service from './components/Service';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Product from './components/ProductCard';
+import ProductSection from './components/ProductSection';
 import ScrollRevealWrapper from './components/ScrollRevealWrapper';
 
 
@@ -41,7 +41,7 @@ function App() {
       <About />
       <Service />
       <Gallery />
-      <Product addToCart={addToCart}/>
+      <ProductSection addToCart={addToCart}/>
       <Contact />
       <Footer />
     </>

@@ -1,4 +1,4 @@
-const productsPhotos = [
+const products = [
     {
         id: 1,
         title: "BEST SHAMPOO AND CONDITIONER FOR DRY HAIR",
@@ -85,4 +85,4 @@ const productsPhotos = [
     }
 ]
 
-export default productsPhotos;
+export default products;
