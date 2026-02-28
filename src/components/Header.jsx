@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import Icons from "./Icons";
+import Cart from "./Cart";
 
-function Header() {
+function Header({ cart }) {
 
     const [ open, setOpen ] = useState(false);
 
@@ -38,9 +39,7 @@ function Header() {
             <Nav />
             
             <div className="menu-cart">
-                <div className="cart">
-                    <Icons.ShoppingCart />
-                </div>
+                <Cart passCart={cart} />
 
                 {/* Toggle Menu Icon */}
                 <div id="menu-con"

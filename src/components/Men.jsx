@@ -1,4 +1,4 @@
-import { menPhotos } from "../../index.js";
+import { menPhotos } from "../components/GalleryPhotos";
 
 function Men() {
     return (

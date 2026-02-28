@@ -1,4 +1,4 @@
-import { womenPhotos } from "../../index";
+import { womenPhotos } from "../components/GalleryPhotos";
 
 function Women() {
     return (

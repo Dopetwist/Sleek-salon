@@ -1,4 +1,4 @@
-import { services } from "../../index";
+import services from "../components/ServiceList";
 
 function Service() {
     return (
