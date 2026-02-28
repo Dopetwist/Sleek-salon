@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import Icons from "./Icons";
+import Cart from "./Cart";
 
 function Header() {
 
@@ -38,13 +39,7 @@ function Header() {
             <Nav />
             
             <div className="menu-cart">
-                <div className="cart">
-                    <Icons.ShoppingCart />
-
-                    <div className="cart-count">
-                        <p className="item-count"> 1 </p>
-                    </div>
-                </div>
+                <Cart />
 
                 {/* Toggle Menu Icon */}
                 <div id="menu-con"
