@@ -21,12 +21,11 @@ function App() {
 
       if (existingItem) {
         // Increase quantity
-        // return prevCart.map((item) =>
-        //   item.id === product.id
-        //     ? { ...item, quantity: item.quantity + 1 }
-        //     : item
-        // );
-        alert("Product already exist in Cart!");
+        return prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
       } else {
         // Add new product
         return [...prevCart, { ...product, quantity: 1 }];
@@ -37,12 +36,12 @@ function App() {
   return (
     <>
       <ScrollRevealWrapper />
-      <Header cart={cart}/>
+      <Header cart={cart} />
       <Home />
       <About />
       <Service />
       <Gallery />
-      <ProductSection addToCart={addToCart}/>
+      <ProductSection addToCart={addToCart} />
       <Contact />
       <Footer />
     </>
