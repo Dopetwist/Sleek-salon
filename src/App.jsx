@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Routes, Route } from "react-router";
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -7,6 +8,7 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProductSection from './components/ProductSection';
+import Checkout from './pages/Checkout';
 import ScrollRevealWrapper from './components/ScrollRevealWrapper';
 
 
@@ -21,12 +23,11 @@ function App() {
 
       if (existingItem) {
         // Increase quantity
-        // return prevCart.map((item) =>
-        //   item.id === product.id
-        //     ? { ...item, quantity: item.quantity + 1 }
-        //     : item
-        // );
-        alert("Product already exist in Cart!");
+        return prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
       } else {
         // Add new product
         return [...prevCart, { ...product, quantity: 1 }];
@@ -37,13 +38,31 @@ function App() {
   return (
     <>
       <ScrollRevealWrapper />
-      <Header cart={cart}/>
-      <Home />
-      <About />
-      <Service />
-      <Gallery />
-      <ProductSection addToCart={addToCart}/>
-      <Contact />
+      <Header cart={cart} />
+
+      <Routes>
+        <Route 
+          path='/'
+          element={
+            <>
+              <Home />
+              <About />
+              <Service />
+              <Gallery />
+              <ProductSection addToCart={addToCart} />
+              <Contact />
+            </>
+          }
+        />
+
+        <Route 
+          path='/checkout'
+          element={
+            <Checkout cart={cart} />
+          }
+        />
+      </Routes>
+
       <Footer />
     </>
   )
