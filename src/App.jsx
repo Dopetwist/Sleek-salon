@@ -7,6 +7,7 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProductSection from './components/ProductSection';
+import Checkout from './components/Checkout';
 import ScrollRevealWrapper from './components/ScrollRevealWrapper';
 
 
@@ -36,6 +37,7 @@ function App() {
   return (
     <>
       <ScrollRevealWrapper />
+      <Checkout cart={cart} />
       <Header cart={cart} />
       <Home />
       <About />
