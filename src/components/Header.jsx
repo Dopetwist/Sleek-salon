@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import Nav from "../components/Nav";
 import Icons from "./Icons";
 import Cart from "./Cart";
@@ -6,6 +7,8 @@ import Cart from "./Cart";
 function Header({ cart }) {
 
     const [ open, setOpen ] = useState(false);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const navBar = document.querySelector(".navbar");
@@ -39,7 +42,9 @@ function Header({ cart }) {
             <Nav />
             
             <div className="menu-cart">
-                <Cart passCart={cart} />
+                <div onClick={() => navigate("/checkout")}>
+                    <Cart passCart={cart} />
+                </div>
 
                 {/* Toggle Menu Icon */}
                 <div id="menu-con"

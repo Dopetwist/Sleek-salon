@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Routes, Route } from "react-router";
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -7,7 +8,7 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProductSection from './components/ProductSection';
-import Checkout from './components/Checkout';
+import Checkout from './pages/Checkout';
 import ScrollRevealWrapper from './components/ScrollRevealWrapper';
 
 
@@ -37,14 +38,31 @@ function App() {
   return (
     <>
       <ScrollRevealWrapper />
-      <Checkout cart={cart} />
       <Header cart={cart} />
-      <Home />
-      <About />
-      <Service />
-      <Gallery />
-      <ProductSection addToCart={addToCart} />
-      <Contact />
+
+      <Routes>
+        <Route 
+          path='/'
+          element={
+            <>
+              <Home />
+              <About />
+              <Service />
+              <Gallery />
+              <ProductSection addToCart={addToCart} />
+              <Contact />
+            </>
+          }
+        />
+
+        <Route 
+          path='/checkout'
+          element={
+            <Checkout cart={cart} />
+          }
+        />
+      </Routes>
+
       <Footer />
     </>
   )
