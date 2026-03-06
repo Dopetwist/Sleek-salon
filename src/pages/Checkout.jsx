@@ -8,23 +8,27 @@ function Checkout({ cart }) {
         );
 
     return (
-        <div>
-            <h1>{JSON.stringify(cart)}</h1>
-            <h2> Checkout 🛒 </h2>
+        <section>
+            {total > 0 ? 
+                <>
+                    <div>
+                        <h2> Checkout 🛒 </h2>
 
-            {cart.map((item) => (
-                <div key={item.id}>
-                    {console.log(item)}
+                        {cart.map((item) => (
+                            <div key={item.id}>
+                                <h3>{item.title}</h3>
+                                <p>{item.description}</p>
+                                <p>Quantity: {item.quantity}</p>
+                                <p>Price: ${item.price * item.quantity}</p>
+                            </div>
+                        ))}
 
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <p>Quantity: {item.quantity}</p>
-                    <p>Price: ${item.price * item.quantity}</p>
-                </div>
-            ))}
-
-            <h2>Total: ${total}</h2>
-        </div>
+                        <h2>Total: ${total}</h2>
+                    </div>
+                </>
+            : <h3> Your cart is empty. Add new items to checkout! </h3>
+            }
+        </section>
     )
 }
 
