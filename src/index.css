@@ -300,6 +300,27 @@ section {
     margin-top: 1rem;
 }
 
+.product-item {
+    display: flex;
+    align-items: center;
+}
+
+.item-img {
+    margin-right: 2rem;
+}
+
+.count {
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--main-color);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #payment-btn {
     font-size: 1.3rem;
     display: flex;
@@ -634,7 +655,7 @@ form textarea {
 }
 
 .footer-container p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .footer-container a {

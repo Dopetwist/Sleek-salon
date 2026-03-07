@@ -7,6 +7,8 @@ function Checkout({ cart }) {
             0
         );
 
+    const roundedTotal = total.toFixed(2); // Round number to 2 decimal  places
+
     return (
         <section className="checkout">
             {total > 0 ? 
@@ -17,23 +19,27 @@ function Checkout({ cart }) {
                         <div className="item-parent">
                             {cart.map((item, index) => (
                                 <div key={item.id} className="item-box">
-                                    <p className="count"> { index + 1 } </p>
-                                    <div className="item-img">
-                                        <img src={item.img} height={100} width={100} alt="Product Image" />
+                                    <div className="count">
+                                        <p> { index + 1 } </p>
                                     </div>
-                                    <div className="inner-item">
-                                        <h3>{item.title}</h3>
-                                        <p>{item.description}</p>
-                                        <p>Quantity: {item.quantity}</p>
-                                        <p className="checkout-price">
-                                            <strong>Price:</strong> ${item.price * item.quantity}
-                                        </p>
+                                    <div className="product-item">
+                                        <div className="item-img">
+                                            <img src={item.img} height={100} width={100} alt="Product Image" />
+                                        </div>
+                                        <div className="inner-item">
+                                            <h3>{item.title}</h3>
+                                            <p>{item.description}</p>
+                                            <p>Quantity: {item.quantity}</p>
+                                            <p className="checkout-price">
+                                                <strong>Price:</strong> ${item.price * item.quantity}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
 
-                        <h2 className="total">Total: ${total}</h2>
+                        <h2 className="total">Total: ${roundedTotal}</h2>
 
                         <button id="payment-btn">
                             <Icons.ArrowRight id="arrow-right" /> Proceed to Payment
