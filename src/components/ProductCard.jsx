@@ -13,7 +13,7 @@ function ProductCard({ addToCart }) {
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
                         <div className="sub">
-                            <p className="price">{item.price}</p>
+                            <p className="price">${item.price}</p>
                             <button
                             onClick={() => addToCart(item)}
                             > 
