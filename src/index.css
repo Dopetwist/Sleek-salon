@@ -116,7 +116,7 @@ section {
 
 .navbar.show {
     width: 100%;
-    background-color: var(--background-color);;
+    background-color: var(--background-color);
     display: block;
     position: absolute;
     top: 100%;
@@ -255,6 +255,66 @@ section {
 .about-img img {
     width: 30vw;
     border-radius: 2rem;
+}
+
+.checkout {
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-box {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.checkout-box h2.checkout-text {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.checkout-box h2.total {
+    font-size: 2rem;
+}
+
+.item-box {
+    margin: 2rem 0;
+    border-bottom: 0.3rem solid var(--main-color);
+    padding-bottom: 1rem;
+}
+
+.item-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.item-box p {
+    font-size: 1.5rem;
+}
+
+.item-box p.checkout-price {
+    margin-top: 1rem;
+}
+
+#payment-btn {
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#arrow-right {
+    margin-right: 1rem;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 1.7rem;
 }
 
 .btn {

@@ -1,6 +1,6 @@
+import Icons from "../components/Icons";
 
 function Checkout({ cart }) {
-    console.log(cart);
 
     const total = cart.reduce(
         (acc, item) => acc + item.price * item.quantity,
@@ -8,25 +8,41 @@ function Checkout({ cart }) {
         );
 
     return (
-        <section>
+        <section className="checkout">
             {total > 0 ? 
                 <>
-                    <div>
-                        <h2> Checkout 🛒 </h2>
+                    <div className="checkout-box">
+                        <h2 className="checkout-text"> Checkout 🛒 </h2>
 
-                        {cart.map((item) => (
-                            <div key={item.id}>
-                                <h3>{item.title}</h3>
-                                <p>{item.description}</p>
-                                <p>Quantity: {item.quantity}</p>
-                                <p>Price: ${item.price * item.quantity}</p>
-                            </div>
-                        ))}
+                        <div className="item-parent">
+                            {cart.map((item, index) => (
+                                <div key={item.id} className="item-box">
+                                    <p className="count"> { index + 1 } </p>
+                                    <div className="item-img">
+                                        <img src={item.img} height={100} width={100} alt="Product Image" />
+                                    </div>
+                                    <div className="inner-item">
+                                        <h3>{item.title}</h3>
+                                        <p>{item.description}</p>
+                                        <p>Quantity: {item.quantity}</p>
+                                        <p className="checkout-price">
+                                            <strong>Price:</strong> ${item.price * item.quantity}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
 
-                        <h2>Total: ${total}</h2>
+                        <h2 className="total">Total: ${total}</h2>
+
+                        <button id="payment-btn">
+                            <Icons.ArrowRight id="arrow-right" /> Proceed to Payment
+                        </button>
                     </div>
                 </>
-            : <h3> Your cart is empty. Add new items to checkout! </h3>
+            : <h3 className="empty-cart"> 
+                Your cart is empty. <br /> Add new items to checkout! 
+                </h3>
             }
         </section>
     )

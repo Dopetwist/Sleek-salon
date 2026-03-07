@@ -1,14 +1,16 @@
 import { 
     TextAlignJustify,
     X,
-    ShoppingCart
+    ShoppingCart,
+    ArrowRight
 } from "lucide-react";
 
 
 const Icons = {
     TextAlignJustify,
     X,
-    ShoppingCart
+    ShoppingCart,
+    ArrowRight
 }
 
 export default Icons;
