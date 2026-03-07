@@ -18,12 +18,17 @@ function Checkout({ cart }) {
                             {cart.map((item, index) => (
                                 <div key={item.id} className="item-box">
                                     <p className="count"> { index + 1 } </p>
-                                    <h3>{item.title}</h3>
-                                    <p>{item.description}</p>
-                                    <p>Quantity: {item.quantity}</p>
-                                    <p className="checkout-price">
-                                        <strong>Price:</strong> ${item.price * item.quantity}
-                                    </p>
+                                    <div className="item-img">
+                                        <img src={item.img} height={100} width={100} alt="Product Image" />
+                                    </div>
+                                    <div className="inner-item">
+                                        <h3>{item.title}</h3>
+                                        <p>{item.description}</p>
+                                        <p>Quantity: {item.quantity}</p>
+                                        <p className="checkout-price">
+                                            <strong>Price:</strong> ${item.price * item.quantity}
+                                        </p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
