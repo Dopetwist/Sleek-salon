@@ -1,14 +1,16 @@
+import { HashLink } from 'react-router-hash-link';
+
 function Nav() {
     return (
         // Nav Section
 
         <nav className="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Our Services</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#products">Products</a>
-            <a href="#contact">Contact Us</a>
+            <HashLink smooth to="/#home">Home</HashLink>
+            <HashLink smooth to="/#about">About Us</HashLink>
+            <HashLink smooth to="/#services">Our Services</HashLink>
+            <HashLink smooth to="/#gallery">Gallery</HashLink>
+            <HashLink smooth to="/#products">Products</HashLink>
+            <HashLink smooth to="/#contact">Contact Us</HashLink>
         </nav>
     )
 }
