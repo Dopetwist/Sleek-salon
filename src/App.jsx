@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route } from "react-router";
 import Header from './components/Header';
 import Home from './components/Home';
@@ -13,7 +13,20 @@ import ScrollRevealWrapper from './components/ScrollRevealWrapper';
 
 
 function App() {
-  const [ cart, setCart ] = useState([]);
+  // Save Cart to Local Storage for persistence
+  const [ cart, setCart ] = useState(() => {
+    try {
+      const savedCart = localStorage.getItem("cart");
+      return savedCart ? JSON.parse(savedCart) : [];
+    } catch {
+      return [];
+    }
+  });
+
+  // Load cart from localstorage
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const addToCart = (product) => {
     setCart((prevCart) => {
@@ -57,9 +70,7 @@ function App() {
 
         <Route 
           path='/checkout'
-          element={
-            <Checkout cart={cart} />
-          }
+          element={ <Checkout cart={cart} /> }
         />
       </Routes>
 
