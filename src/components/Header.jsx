@@ -7,7 +7,6 @@ import Cart from "./Cart";
 function Header({ cart }) {
 
     const [ open, setOpen ] = useState(false);
-    /* const [ isCheckout, setCheckout ] = useState(false); */
 
     const navigate = useNavigate();
 
@@ -43,11 +42,7 @@ function Header({ cart }) {
             <Nav />
             
             <div className="menu-cart">
-                <div onClick={() => {
-                    navigate("/checkout");
-                    /* setCheckout(true); */
-                }
-                }>
+                <div onClick={() => { navigate("/checkout") }}>
                     <Cart passCart={cart} />
                 </div>
 

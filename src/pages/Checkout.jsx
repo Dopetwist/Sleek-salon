@@ -2,7 +2,7 @@ import Icons from "../components/Icons";
 
 function Checkout({ cart }) {
 
-    const total = cart.reduce(
+    let total = cart.reduce(
         (acc, item) => acc + item.price * item.quantity,
             0
         );
@@ -41,7 +41,12 @@ function Checkout({ cart }) {
 
                         <h2 className="total">Total: ${roundedTotal}</h2>
 
-                        <button id="payment-btn">
+                        <button 
+                        id="payment-btn"
+                        onClick={() => {
+                            localStorage.setItem("cart", []); // Clear cart from storage
+                        }} 
+                        >
                             <Icons.ArrowRight id="arrow-right" /> Proceed to Payment
                         </button>
                     </div>
