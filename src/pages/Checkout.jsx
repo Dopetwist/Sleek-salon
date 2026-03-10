@@ -1,13 +1,19 @@
 import Icons from "../components/Icons";
 
-function Checkout({ cart }) {
+function Checkout({ cart, setCart }) {
 
-    let total = cart.reduce(
+    const total = cart.reduce(
         (acc, item) => acc + item.price * item.quantity,
             0
         );
 
     const roundedTotal = total.toFixed(2); // Round number to 2 decimal  places
+
+    const handleCheckout = () => {
+        alert("Order completed successfully!");
+
+        setCart([]); // Clear cart from local storage
+    }
 
     return (
         <section className="checkout">
@@ -43,9 +49,7 @@ function Checkout({ cart }) {
 
                         <button 
                         id="payment-btn"
-                        onClick={() => {
-                            localStorage.setItem("cart", []); // Clear cart from storage
-                        }} 
+                        onClick={handleCheckout}
                         >
                             <Icons.ArrowRight id="arrow-right" /> Proceed to Payment
                         </button>
