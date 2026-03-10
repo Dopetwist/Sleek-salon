@@ -35,7 +35,19 @@ function Checkout({ cart, setCart }) {
                                         <div className="inner-item">
                                             <h3>{item.title}</h3>
                                             <p>{item.description}</p>
-                                            <p>Quantity: {item.quantity}</p>
+                                            <div className="quantity-box">
+                                                <p>Quantity: {item.quantity}</p>
+                                                <div className="quantity-btns">
+                                                    <button 
+                                                    id="decrease" 
+                                                    className="quantity-button"
+                                                    > - </button>
+                                                    <button
+                                                    id="increase"
+                                                    className="quantity-button"
+                                                    > + </button>
+                                                </div>
+                                            </div>
                                             <p className="checkout-price">
                                                 <strong>Price:</strong> ${item.price * item.quantity}
                                             </p>
@@ -49,6 +61,7 @@ function Checkout({ cart, setCart }) {
 
                         <button 
                         id="payment-btn"
+                        className="selected"
                         onClick={handleCheckout}
                         >
                             <Icons.ArrowRight id="arrow-right" /> Proceed to Payment
