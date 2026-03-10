@@ -309,6 +309,34 @@ section {
     margin-right: 2rem;
 }
 
+.quantity-box {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-btns {
+    margin-left: 2rem;
+}
+
+.quantity-button {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #c7158668;
+    color: var(--text-color);
+    padding: .2rem 1rem;
+    margin: 0 0.5rem;
+    border: 0.1rem solid #c71585;
+    border-radius: 0.5rem;
+    transition: .3s ease;
+}
+
+.quantity-button:hover {
+    cursor: pointer;
+    background-color: #c71585;
+}
+
 .count {
     height: 3rem;
     width: 3rem;
@@ -555,7 +583,7 @@ section {
     line-height: 1.6;
 }
 
-button {
+button.selected {
     font-size: 1.1rem;
     font-weight: 600;
     background: var(--main-color);
@@ -568,7 +596,7 @@ button {
     transition: .3s ease;
 }
 
-button:hover {
+button.selected:hover {
     box-shadow: none;
     cursor: pointer;
 }
@@ -658,7 +686,7 @@ form textarea {
     font-size: 1.4rem;
 }
 
-.footer-container a {
+.footer-container button {
     width: 3.5rem;
     height: 3.5rem;
     background: var(--main-color);
@@ -671,12 +699,12 @@ form textarea {
     transition: .3s ease;
 }
 
-.footer-container a:hover {
+.footer-container button:hover {
     box-shadow: none;
     cursor: pointer;
 }
 
-.footer-container a i {
+.footer-container button {
     font-size: 3rem;
     color: var(--text-color);
 }

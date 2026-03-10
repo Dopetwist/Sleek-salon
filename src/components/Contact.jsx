@@ -22,7 +22,7 @@ function Contact() {
                         </datalist>
 
                         <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                        <button>Send message</button>
+                        <button className="selected">Send message</button>
                     </form>
                 </div>
             </div>

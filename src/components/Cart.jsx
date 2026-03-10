@@ -1,7 +1,7 @@
 import Icons from "./Icons";
 
 function Cart({ passCart }) {
-    const totalItems = passCart.reduce(
+    let totalItems = passCart.reduce(
         (total, item) => total + item.quantity,
         0
     );
