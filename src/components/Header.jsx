@@ -42,7 +42,7 @@ function Header({ cart }) {
             <Nav />
             
             <div className="menu-cart">
-                <div onClick={() => { navigate("/checkout") }}>
+                <div onClick={() => { navigate("/order") }}>
                     <Cart passCart={cart} />
                 </div>
 

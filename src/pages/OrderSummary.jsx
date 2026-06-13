@@ -1,6 +1,6 @@
 import Icons from "../components/Icons";
 
-function Checkout({ cart, setCart }) {
+function OrderSummary({ cart, setCart }) {
 
     const total = cart.reduce(
         (acc, item) => acc + item.price * item.quantity,
@@ -76,4 +76,4 @@ function Checkout({ cart, setCart }) {
     )
 }
 
-export default Checkout;
+export default OrderSummary;
