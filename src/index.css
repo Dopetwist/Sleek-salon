@@ -312,12 +312,13 @@ section {
 .quantity-box {
     width: fit-content;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin: 1rem 0;
 }
 
 .quantity-btns {
-    margin-left: 2rem;
+    margin: 0 4rem;
 }
 
 .quantity-button {
@@ -337,6 +338,54 @@ section {
     background-color: #c71585;
 }
 
+#remove {
+    color: #ff0000;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+#remove:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.clear-proceed-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.clear-proceed-buttons button, .add-to-cart {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: var(--main-color);
+    letter-spacing: .1rem;
+    color: var(--text-color);
+    padding: .7rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    transition: .3s ease;
+}
+
+.clear-proceed-buttons button:hover,
+.add-to-cart:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.payment-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.add-to-cart {
+    margin-top: 1rem;
+}
+
 .count {
     height: 3rem;
     width: 3rem;
@@ -347,18 +396,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#payment-btn {
-    font-size: 1.3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-}
-
-#arrow-right {
-    margin-right: 1rem;
 }
 
 .empty-cart {
@@ -581,24 +618,6 @@ section {
 .grid-box .description {
     margin-left: 1.5rem;
     line-height: 1.6;
-}
-
-button.selected {
-    font-size: 1.1rem;
-    font-weight: 600;
-    background: var(--main-color);
-    letter-spacing: .1rem;
-    color: var(--text-color);
-    padding: .7rem 1.5rem;
-    margin-top: 1rem;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    transition: .3s ease;
-}
-
-button.selected:hover {
-    box-shadow: none;
-    cursor: pointer;
 }
 
 .description h3 {
