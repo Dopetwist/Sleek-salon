@@ -53,11 +53,11 @@ function OrderSummary({ cart, setCart }) {
     };
 
     return (
-        <section className="checkout">
+        <section className="order-summary">
             {total > 0 ? 
                 <>
-                    <div className="checkout-box">
-                        <h2 className="checkout-text"> Checkout 🛒 </h2>
+                    <div className="order-box">
+                        <h2 className="order-text"> Order Summary 🛒 </h2>
 
                         <div className="item-parent">
                             {cart.map((item, index) => (
@@ -125,7 +125,7 @@ function OrderSummary({ cart, setCart }) {
                             
                             <button 
                             className="payment-btn"
-                            onClick={() => navigate("/checkout")}
+                            onClick={() => navigate("/checkout", { state: { total: roundedTotal } })}
                             >
                                 Proceed to Payment <Icons.ArrowRight id="arrow-right" />
                             </button>
