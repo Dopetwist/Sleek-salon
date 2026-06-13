@@ -1,78 +1,119 @@
-import Icons from "../components/Icons";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router";
+import { CreditCard, Landmark, HandCoins } from "lucide-react";
+import Modal from "../components/Modal";
 
-function Checkout({ cart, setCart }) {
+function Checkout ({ setCart }) {
 
-    const total = cart.reduce(
-        (acc, item) => acc + item.price * item.quantity,
-            0
-        );
+    const location = useLocation();
+    const { total } = location.state || { total: 0 };
 
-    const roundedTotal = total.toFixed(2); // Round number to 2 decimal  places
+    const [ showModal, setShowModal ] = useState(false);
+    const [ isPaying, setIsPaying ] = useState(false);
+    const [ optionType, setOptionType ] = useState("");
 
-    const handleCheckout = () => {
-        alert("Order completed successfully!");
+    const navigate = useNavigate();
 
-        setCart([]); // Clear cart from local storage
+    /* Effect to disable background scrolling when Modal is open and re-enable it when Modal is closed or component unmounts */
+    useEffect(() => {
+        document.body.style.overflow = showModal ? "hidden" : "auto";
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [showModal]);
+
+    /* Function to handle payment */
+    const handlePayment = () => {
+        navigate("/orderSuccess", { state: total });
+        setCart([]);
+    }
+
+    /* Function to open Modal for Credit Card payment option */
+    const openCardModal = () => {
+        setOptionType("Card");
+        setShowModal(true);
+    }
+
+    /* Function to open Modal for Bank Transfer payment option */
+    const openTransferModal = () => {
+        setOptionType("Transfer");
+        setShowModal(true);
+    }
+
+    /* Function to open Modal for Cash on Delivery payment option */
+    const openCashModal = () => {
+        setOptionType("Cash");
+        setShowModal(true);
     }
 
     return (
-        <section className="checkout">
-            {total > 0 ? 
-                <>
-                    <div className="checkout-box">
-                        <h2 className="checkout-text"> Checkout 🛒 </h2>
+        <div>
+            <div className="checkout-box">
 
-                        <div className="item-parent">
-                            {cart.map((item, index) => (
-                                <div key={item.id} className="item-box">
-                                    <div className="count">
-                                        <p> { index + 1 } </p>
-                                    </div>
-                                    <div className="product-item">
-                                        <div className="item-img">
-                                            <img src={item.img} height={100} width={100} alt="Product Image" />
-                                        </div>
-                                        <div className="inner-item">
-                                            <h3>{item.title}</h3>
-                                            <p>{item.description}</p>
-                                            <div className="quantity-box">
-                                                <p>Quantity: {item.quantity}</p>
-                                                <div className="quantity-btns">
-                                                    <button 
-                                                    id="decrease" 
-                                                    className="quantity-button"
-                                                    > - </button>
-                                                    <button
-                                                    id="increase"
-                                                    className="quantity-button"
-                                                    > + </button>
-                                                </div>
-                                            </div>
-                                            <p className="checkout-price">
-                                                <strong>Price:</strong> ${item.price * item.quantity}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                <form className="checkout-form top">
+                    <p className="billing-header box-header">Billing Details</p>
 
-                        <h2 className="total">Total: ${roundedTotal}</h2>
+                    <div className="input-box">
+                        <label htmlFor="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name" />
+                    </div>
+                    <div className="input-box">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email"  placeholder="Your email address" />
+                    </div>
+                    <div className="input-box">
+                        <label htmlFor="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="Your phone number" />
+                    </div>
+                    <div className="input-box">
+                        <label htmlFor="address">Shipping Address</label>
+                        <input type="text" id="address" placeholder="Enter your address" />
+                    </div>
+                </form>
+
+                <div className="payment top">
+                    <p className="payment-method box-header">Payment Method</p>
+
+                    <div className="payment-options">
+                        <button
+                        className="pay-card payment-choice"
+                        onClick={openCardModal}
+                        >
+                            <CreditCard size={24} />
+                            Pay with Card
+                        </button>
 
                         <button 
-                        id="payment-btn"
-                        className="selected"
-                        onClick={handleCheckout}
+                        className="bank-transfer payment-choice"
+                        onClick={openTransferModal}
                         >
-                            <Icons.ArrowRight id="arrow-right" /> Proceed to Payment
+                            <Landmark size={24} />
+                            Bank Transfer
+                        </button>
+
+                        <button 
+                        className="pay-on-delivery payment-choice"
+                        onClick={openCashModal}
+                        >
+                            <HandCoins size={24} />
+                            Cash on Delivery
                         </button>
                     </div>
-                </>
-            : <h3 className="empty-cart"> 
-                Your cart is empty. <br /> Add new items to checkout! 
-                </h3>
-            }
-        </section>
+                </div>
+            </div>
+
+            <Modal
+                isOpen={showModal}
+                type={optionType}
+                total={total}
+                title="Checkout"
+                onConfirm={handlePayment}
+                onCancel={() => setShowModal(false)}
+                isLoading={isPaying}
+                setCart={setCart}
+            />
+        </div>
     )
 }
 

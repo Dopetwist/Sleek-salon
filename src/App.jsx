@@ -8,8 +8,9 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProductSection from './components/ProductSection';
-import Checkout from './pages/Checkout';
+import OrderSummary from './pages/OrderSummary';
 import ScrollRevealWrapper from './components/ScrollRevealWrapper';
+import Checkout from './pages/Checkout';
 
 
 function App() {
@@ -69,8 +70,13 @@ function App() {
         />
 
         <Route 
+          path='/order'
+          element={ <OrderSummary cart={cart} setCart={setCart}/> }
+        />
+
+        <Route 
           path='/checkout'
-          element={ <Checkout cart={cart} setCart={setCart}/> }
+          element={ <Checkout setCart={setCart}/> }
         />
       </Routes>
 

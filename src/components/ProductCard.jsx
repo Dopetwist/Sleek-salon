@@ -15,7 +15,7 @@ function ProductCard({ addToCart }) {
                         <div className="sub">
                             <p className="price">${item.price}</p>
                             <button
-                            className="selected"
+                            className="add-to-cart"
                             onClick={() => addToCart(item)}
                             > 
                                 Add to Cart 
