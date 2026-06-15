@@ -391,6 +391,10 @@ section {
     margin-top: 1rem;
 }
 
+.add-to-cart.added {
+    background-color: #840455;
+}
+
 .checkout-box {
     min-height: 100vh;
     background-color: var(--second-bg-color);
@@ -405,7 +409,7 @@ section {
 .payment {
     width: 40%;
     background: var(--background-color);
-    padding: 1rem;
+    padding: 2rem;
     border: 0.1rem solid var(--sub-text);
     border-radius: 0.3rem;
 }
@@ -419,7 +423,7 @@ section {
 .checkout-form .input-box input {
     background-color: #44444456;
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 0.3rem 0;
     padding: 0.5rem;
     border: 0.1rem solid var(--sub-text);
@@ -427,7 +431,8 @@ section {
 }
 
 .checkout-form .input-box label {
-    font-size: 1.2rem;
+    width: fit-content;
+    font-size: 1.4rem;
 }
 
 .top {
@@ -441,7 +446,7 @@ section {
 }
 
 .box-header {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
@@ -454,7 +459,7 @@ section {
 }
 
 .payment-choice {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-family: var(--body-font);
     color: var(--text-color);
     background-color: #44444456;
@@ -469,6 +474,52 @@ section {
 .payment-choice:hover {
     cursor: pointer;
     background-color: #444444bc;
+}
+
+/* Container to center the toast */
+.toast-container {
+    width: 30%;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    pointer-events: none; /* allows clicks through container */
+}
+
+.toast {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    text-align: center;
+    pointer-events: all;
+    animation: slideIn 0.4s ease;
+}
+
+/* Types */
+.toast.success {
+    background-color: #28a745;
+}
+
+.toast.error {
+    background-color: #dc3545;
+}
+
+.toast.info {
+    background-color: #007bff;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Modal styles */
@@ -517,12 +568,13 @@ section {
 }
 
 .card-container h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .card-container label,
 .form-smaller-box label {
-    font-size: 0.8rem;
+    width: fit-content;
+    font-size: 1rem;
 }
 
 .card-container figure {
@@ -555,11 +607,11 @@ section {
 .card-details-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .card-total p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
@@ -569,7 +621,7 @@ section {
 
 .card-details-box input,
 .form-smaller-box input {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-top: 0.3rem;
     padding: 0.5rem 1rem;
     border: 0.1rem solid var(--sub-text);
@@ -615,7 +667,7 @@ section {
 }
 
 #pay-btn {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     font-family: var(--heading-font);
     color: var(--text-color);
     padding: 0.5rem 2rem;
@@ -638,12 +690,13 @@ section {
 }
 
 .transfer-container h2 {
+    font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 
 .transfer-container p,
 .cash-container p {
-    font-family: var(--body-font);
+    font-size: 1.3rem;
     line-height: 1.5;
 }
 
@@ -662,7 +715,7 @@ section {
 #paid-btn,
 .cash-back-btn {
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.4rem;
     background-color: #004ea1;
     color: var(--text-color);
     padding: 0.8rem 0;

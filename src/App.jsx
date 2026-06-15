@@ -11,9 +11,13 @@ import ProductSection from './components/ProductSection';
 import OrderSummary from './pages/OrderSummary';
 import ScrollRevealWrapper from './components/ScrollRevealWrapper';
 import Checkout from './pages/Checkout';
+import Toast from './components/animation/Toast';
 
 
 function App() {
+
+  const [ toast, setToast ] = useState(null);
+
   // Save Cart to Local Storage for persistence
   const [ cart, setCart ] = useState(() => {
     try {
@@ -63,8 +67,21 @@ function App() {
               <About />
               <Service />
               <Gallery />
-              <ProductSection addToCart={addToCart} />
+              <ProductSection 
+                cart={cart} 
+                addToCart={addToCart}
+                setToast={setToast}
+              />
               <Contact />
+
+              {/* Render Toast */}
+              {toast && (
+                  <Toast
+                      message={toast.message}
+                      type={toast.type}
+                      onClose={() => setToast(null)}
+                  />
+              )}
             </>
           }
         />

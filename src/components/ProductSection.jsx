@@ -1,6 +1,6 @@
 import ProductCard from "./ProductCard";
 
-function ProductSection({ addToCart }) {
+function ProductSection({ cart, addToCart, setToast }) {
 
     return (
         // Product section design
@@ -9,7 +9,9 @@ function ProductSection({ addToCart }) {
             <h2 className="heading">Hair <span>Products</span></h2>
 
             <ProductCard
+                cart={cart}
                 addToCart={addToCart}
+                setToast={setToast}
             />
         </section>
     )
