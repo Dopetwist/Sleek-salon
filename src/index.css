@@ -118,6 +118,7 @@ section {
 .navbar.show {
     width: 100%;
     background-color: var(--background-color);
+    box-shadow: 0 0.2rem 0.5rem #777;
     display: block;
     position: absolute;
     top: 100%;
@@ -298,6 +299,7 @@ section {
 }
 
 .item-box p.checkout-price {
+    font-size: 1.7rem;
     margin-top: 1rem;
 }
 
@@ -316,6 +318,11 @@ section {
     justify-content: space-between;
     align-items: center;
     margin: 1rem 0;
+}
+
+.quantity-container {
+    display: flex;
+    gap: 2rem;
 }
 
 .quantity-btns {
@@ -478,7 +485,7 @@ section {
 
 #order-confirmation-page {
     min-height: 100vh;
-    background-color: var(--second-bg-color);
+    background-color: var(--background-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1248,7 +1255,7 @@ section {
     }
 
     .gallery-content {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
 
@@ -1282,12 +1289,53 @@ section {
         font-size: 1.4rem;
     }
 
+    .quantity-btns {
+        margin: 0;
+    }
+
+    .quantity-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
     section#products {
         padding: 10rem 4% 2rem;
     }
 
     form input {
         width: 100%;
+    }
+
+    .checkout-form, .payment {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .payment-options {
+        gap: 0.5rem;
+    }
+
+    .payment-choice {
+        font-size: 1.1rem;
+        padding: 0.5rem;
+    }
+
+    .toast-container {
+        width: 90%;
+    }
+
+    .order-container {
+        width: 90%;
+    }
+
+    .order-success {
+        width: 100%;
+        margin: 1rem;
+    }
+
+    .modal {
+        width: 90%;
     }
 
     .footer-container {
@@ -1384,6 +1432,27 @@ section {
         margin-bottom: 1rem;
     }
 
+    .order-success {
+        width: 100%;
+    }
+
+    .order-container {
+        width: 70%;
+    }
+
+    .checkout-form, .payment {
+        width: 70%;
+    }
+
+    .modal {
+        width: 50%;
+    }
+
+    .toast-container {
+        width: 70%;
+        transform: translateX(-15%);
+    }
+
     section#products {
         padding: 10rem 4% 2rem;
     }
@@ -1396,13 +1465,30 @@ section {
 /* Landscape Tablet */
 
 @media (min-width: 768px) and (max-width: 1023px) {
+    .checkout-form, .payment {
+        width: 50%;
+    }
 
+    .toast-container,
+    .modal {
+        width: 40%;
+    }
 }
 
 /* Laptop */
 
 @media (min-width: 1024px) and (max-width: 1199px) {
+    .checkout-form, .payment {
+        width: 50%;
+    }
 
+    .modal {
+        width: 30%;
+    }
+
+    .toast-container {
+        width: 40%;
+    }
 }
 
 /* Desktops */

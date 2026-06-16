@@ -80,41 +80,44 @@ function OrderSummary({ cart, setCart, toast, setToast }) {
                                         <div className="inner-item">
                                             <h3>{item.title}</h3>
                                             <p>{item.description}</p>
-                                            <div className="quantity-box">
-                                                <p>Quantity: {item.quantity}</p>
-                                                <div className="quantity-btns">
-                                                    <button 
-                                                    id="decrease" 
-                                                    className="quantity-button"
-                                                    onClick={() => {
-                                                        decreaseQuantity(item.id);
-                                                        handleToast();
-                                                    }}
-                                                    disabled={item.quantity === 1} // Disable button if quantity is 1
-                                                    > - </button>
-                                                    <button
-                                                    id="increase"
-                                                    className="quantity-button"
-                                                    onClick={() => {
-                                                        increaseQuantity(item.id);
-                                                        handleToast();
-                                                    }}
-                                                    > + </button>
-                                                </div>
-
-                                                <p 
-                                                id="remove"
-                                                onClick={() => {
-                                                    removeFromCart(item.id);
-                                                    removeButtonToast();
-                                                }}
-                                                >
-                                                    Remove item
-                                                </p>
-                                            </div>
                                             <p className="checkout-price">
                                                 <strong>Price:</strong> ${(item.price * item.quantity).toFixed(2)}
                                             </p>
+                                            
+                                            <div className="quantity-box">
+                                                <p>Quantity: {item.quantity}</p>
+                                                <div className="quantity-container">
+                                                    <div className="quantity-btns">
+                                                        <button 
+                                                        id="decrease" 
+                                                        className="quantity-button"
+                                                        onClick={() => {
+                                                            decreaseQuantity(item.id);
+                                                            handleToast();
+                                                        }}
+                                                        disabled={item.quantity === 1} // Disable button if quantity is 1
+                                                        > - </button>
+                                                        <button
+                                                        id="increase"
+                                                        className="quantity-button"
+                                                        onClick={() => {
+                                                            increaseQuantity(item.id);
+                                                            handleToast();
+                                                        }}
+                                                        > + </button>
+                                                    </div>
+
+                                                    <p 
+                                                    id="remove"
+                                                    onClick={() => {
+                                                        removeFromCart(item.id);
+                                                        removeButtonToast();
+                                                    }}
+                                                    >
+                                                        Remove item
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
