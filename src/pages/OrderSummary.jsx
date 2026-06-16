@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router";
 import Icons from "../components/Icons";
+import Toast from "../components/animation/Toast";
 
-function OrderSummary({ cart, setCart }) {
+function OrderSummary({ cart, setCart, toast, setToast }) {
 
     const navigate = useNavigate();
 
@@ -19,6 +20,13 @@ function OrderSummary({ cart, setCart }) {
     // Remove item from cart and show toast
     const removeFromCart = (id) => {
         setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+    }
+
+    const handleToast = () => {
+        setToast({
+            message: "✔ Product quantity updated successfully!",
+            type: "success"
+        })
     }
 
     const removeButtonToast = () => {
@@ -72,41 +80,44 @@ function OrderSummary({ cart, setCart }) {
                                         <div className="inner-item">
                                             <h3>{item.title}</h3>
                                             <p>{item.description}</p>
+                                            <p className="checkout-price">
+                                                <strong>Price:</strong> ${(item.price * item.quantity).toFixed(2)}
+                                            </p>
+                                            
                                             <div className="quantity-box">
                                                 <p>Quantity: {item.quantity}</p>
-                                                <div className="quantity-btns">
-                                                    <button 
-                                                    id="decrease" 
-                                                    className="quantity-button"
-                                                    onClick={() => {
-                                                        decreaseQuantity(item.id);
-                                                        /* handleToast(); */
-                                                    }}
-                                                    disabled={item.quantity === 1} // Disable button if quantity is 1
-                                                    > - </button>
-                                                    <button
-                                                    id="increase"
-                                                    className="quantity-button"
-                                                    onClick={() => {
-                                                        increaseQuantity(item.id);
-                                                        /* handleToast(); */
-                                                    }}
-                                                    > + </button>
-                                                </div>
+                                                <div className="quantity-container">
+                                                    <div className="quantity-btns">
+                                                        <button 
+                                                        id="decrease" 
+                                                        className="quantity-button"
+                                                        onClick={() => {
+                                                            decreaseQuantity(item.id);
+                                                            handleToast();
+                                                        }}
+                                                        disabled={item.quantity === 1} // Disable button if quantity is 1
+                                                        > - </button>
+                                                        <button
+                                                        id="increase"
+                                                        className="quantity-button"
+                                                        onClick={() => {
+                                                            increaseQuantity(item.id);
+                                                            handleToast();
+                                                        }}
+                                                        > + </button>
+                                                    </div>
 
-                                                <p 
-                                                id="remove"
-                                                onClick={() => {
-                                                    removeFromCart(item.id);
-                                                    /* removeButtonToast(); */
-                                                }}
-                                                >
-                                                    Remove item
-                                                </p>
+                                                    <p 
+                                                    id="remove"
+                                                    onClick={() => {
+                                                        removeFromCart(item.id);
+                                                        removeButtonToast();
+                                                    }}
+                                                    >
+                                                        Remove item
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <p className="checkout-price">
-                                                <strong>Price:</strong> ${item.price * item.quantity}
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -136,6 +147,15 @@ function OrderSummary({ cart, setCart }) {
                 Your cart is empty. <br /> Add new items to checkout! 
                 </h3>
             }
+
+            {/* Render Toast */}
+            {toast && (
+                <Toast
+                    message={toast.message}
+                    type={toast.type}
+                    onClose={() => setToast(null)}
+                />
+            )}
         </section>
     )
 }

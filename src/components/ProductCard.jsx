@@ -1,6 +1,20 @@
 import products from "./ProductList";
 
-function ProductCard({ addToCart }) {
+function ProductCard({ cart, addToCart, setToast }) {
+
+    // Function to check if product is already in cart
+    const isInCart = (id) => {
+        return cart.some(item => item.id === id);
+    }
+
+    // Function to show toast notification when product is added to cart
+    const handleToast = () => {
+        setToast({
+            message: "✔ Cart updated successfully!",
+            type: "success"
+        })
+    }
+
     return (
         <div className="grid-container">
             {products.map((item) => (
@@ -15,10 +29,13 @@ function ProductCard({ addToCart }) {
                         <div className="sub">
                             <p className="price">${item.price}</p>
                             <button
-                            className="add-to-cart"
-                            onClick={() => addToCart(item)}
+                            className={`add-to-cart ${isInCart(item.id) ? "added" : ""}`}
+                            onClick={() => {
+                                addToCart(item);
+                                handleToast();
+                            }}
                             > 
-                                Add to Cart 
+                                {isInCart(item.id) ? "✔ Added" : "Add to Cart"} 
                             </button>
                         </div>
                     </div>

@@ -37,7 +37,12 @@ function Header({ cart }) {
         //  Header Section
 
         <header className="header" id="header">
-            <a href="#home" className="logo">Sleek</a>
+            <a href="#home" 
+            className="logo"
+            onClick={() => navigate("/")}
+            >
+                Sleek
+            </a>
 
             <Nav />
             
