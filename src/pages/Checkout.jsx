@@ -25,7 +25,7 @@ function Checkout ({ setCart }) {
 
     /* Function to handle payment */
     const handlePayment = () => {
-        navigate("/orderSuccess", { state: total });
+        navigate("/confirmation", { state: total });
         setCart([]);
     }
 

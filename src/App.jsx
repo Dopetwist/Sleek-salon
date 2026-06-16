@@ -12,6 +12,7 @@ import OrderSummary from './pages/OrderSummary';
 import ScrollRevealWrapper from './components/ScrollRevealWrapper';
 import Checkout from './pages/Checkout';
 import Toast from './components/animation/Toast';
+import OrderConfirmation from './pages/OrderConfirmation';
 
 
 function App() {
@@ -88,12 +89,22 @@ function App() {
 
         <Route 
           path='/order'
-          element={ <OrderSummary cart={cart} setCart={setCart}/> }
+          element={ <OrderSummary 
+              cart={cart} 
+              setCart={setCart}
+              toast={toast}
+              setToast={setToast}
+            /> }
         />
 
         <Route 
           path='/checkout'
-          element={ <Checkout setCart={setCart}/> }
+          element={ <Checkout setCart={setCart} /> }
+        />
+
+        <Route 
+          path='/confirmation'
+          element={ <OrderConfirmation /> }
         />
       </Routes>
 

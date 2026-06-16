@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router";
 import Icons from "../components/Icons";
+import Toast from "../components/animation/Toast";
 
-function OrderSummary({ cart, setCart }) {
+function OrderSummary({ cart, setCart, toast, setToast }) {
 
     const navigate = useNavigate();
 
@@ -19,6 +20,13 @@ function OrderSummary({ cart, setCart }) {
     // Remove item from cart and show toast
     const removeFromCart = (id) => {
         setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+    }
+
+    const handleToast = () => {
+        setToast({
+            message: "✔ Product quantity updated successfully!",
+            type: "success"
+        })
     }
 
     const removeButtonToast = () => {
@@ -80,7 +88,7 @@ function OrderSummary({ cart, setCart }) {
                                                     className="quantity-button"
                                                     onClick={() => {
                                                         decreaseQuantity(item.id);
-                                                        /* handleToast(); */
+                                                        handleToast();
                                                     }}
                                                     disabled={item.quantity === 1} // Disable button if quantity is 1
                                                     > - </button>
@@ -89,7 +97,7 @@ function OrderSummary({ cart, setCart }) {
                                                     className="quantity-button"
                                                     onClick={() => {
                                                         increaseQuantity(item.id);
-                                                        /* handleToast(); */
+                                                        handleToast();
                                                     }}
                                                     > + </button>
                                                 </div>
@@ -98,14 +106,14 @@ function OrderSummary({ cart, setCart }) {
                                                 id="remove"
                                                 onClick={() => {
                                                     removeFromCart(item.id);
-                                                    /* removeButtonToast(); */
+                                                    removeButtonToast();
                                                 }}
                                                 >
                                                     Remove item
                                                 </p>
                                             </div>
                                             <p className="checkout-price">
-                                                <strong>Price:</strong> ${item.price * item.quantity}
+                                                <strong>Price:</strong> ${(item.price * item.quantity).toFixed(2)}
                                             </p>
                                         </div>
                                     </div>
@@ -136,6 +144,15 @@ function OrderSummary({ cart, setCart }) {
                 Your cart is empty. <br /> Add new items to checkout! 
                 </h3>
             }
+
+            {/* Render Toast */}
+            {toast && (
+                <Toast
+                    message={toast.message}
+                    type={toast.type}
+                    onClose={() => setToast(null)}
+                />
+            )}
         </section>
     )
 }
